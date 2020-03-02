@@ -1,0 +1,114 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://suntcrick.github.io
+date_format: "ordinal"
+title: Sunt
+subtitle: "VENI VIDI VICI"
+description: "Personal website of Sunt"
+keywords: 孙挺, Sun Ting, Sunt
+timezone: Asia/Beijing
+encoding: "utf-8"
+side_bar_repo_limit: 5
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Sunt
+organization: SUSTech
+organization_url: 
+github_username: SuntCrick
+location: Shenzhen
+email: 11710108@mail.sustech.edu.cn
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  - href: /
+    label: Blog
+
+  - href: /about/
+    label: About Me
+
+  - href: /life/
+    label: Life
+
+#  -
+#    href: /category/
+#    label: Category
+
+# 归档功能不能用，一用就报错
+#   -
+#     href: /archives/
+#     label: 归档
+
+  -
+    href: /wiki/
+    label: Wiki
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 10
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+
+repository: SuntCrick/suntcrick.github.io
+comments_provider: gitalk
+
+# https://disqus.com
+disqus:
+    username:
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+
+gitalk:
+    owner: SuntCrick
+    repo: blog-comments
+    clientID: 03ea9de74f704f691331
+    clientSecret: f84eca9283e3aa26ebe34e16a3455f7f9683d3ef
+    
+    
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
+
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-80669434-1
