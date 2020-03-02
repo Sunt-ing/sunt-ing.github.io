@@ -1,10 +1,10 @@
-My personal website：<https://sunt-ting.github.io>.
+My personal website：<https://sunt-ing.github.io>.
 
 ## Screenshot
 
-**[Preview &rarr;](https://sunt-ting.github.io)**
+**[Preview &rarr;](https://sunt-ing.github.io)**
 
-![screenshot home](https://sunt-ting.github.io/images/home/home.png)
+![screenshot home](https://sunt-ing.github.io/images/home/home.png)
 
 
 ## Acknowledgment
