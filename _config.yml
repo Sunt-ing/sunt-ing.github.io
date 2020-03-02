@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://suntcrick.github.io
+url: https://sunt-ting.github.io
 date_format: "ordinal"
 title: Sunt
 subtitle: "VENI VIDI VICI"
@@ -18,7 +18,7 @@ side_bar_repo_limit: 5
 author: Sunt
 organization: SUSTech
 organization_url: 
-github_username: SuntCrick
+github_username: Sunt-ing
 location: Shenzhen
 email: 11710108@mail.sustech.edu.cn
 
@@ -79,7 +79,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: SuntCrick/suntcrick.github.io
+repository: Sunt-ing/sunt-ing.github.io
 comments_provider: gitalk
 
 # https://disqus.com
@@ -89,7 +89,7 @@ disqus:
 gitment:
 
 gitalk:
-    owner: SuntCrick
+    owner: Sunt-ing
     repo: blog-comments
     clientID: 03ea9de74f704f691331
     clientSecret: f84eca9283e3aa26ebe34e16a3455f7f9683d3ef
