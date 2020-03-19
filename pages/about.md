@@ -4,7 +4,7 @@ title: About Me
 description: Sunt
 keywords: Sun Ting, 孙挺, Sunt
 comments: true
-menu: About Me
+menu: About
 permalink: /about/
 
 
