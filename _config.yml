@@ -30,7 +30,7 @@ navs:
     label: Blog
 
   - href: /about/
-    label: About Me
+    label: About
 
   - href: /life/
     label: Life
