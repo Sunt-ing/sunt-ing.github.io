@@ -2,7 +2,7 @@
     * 估计出一个批处理任务的耗时，特别是当我们用云服务来跑我们的Spark 机器学习任务时
     * 当我们要购买云服务提供商的服务器实例来跑我们的任务时，如果能事先得知当前集群配置下我们的任务要跑多久，我们就可以对不同的资源配置进行比较，在耗时、费用上做出权衡，从而找到最适合我们的集群配置。
     * 比如，要花最少的钱在 deadline前跑完我们的任务，或者在所给budget下用最少的时间跑完我们的任务
-* 关键词：performance estimate（prediction）
+* 关键词：performance estimate (prediction)
 * 核心思想
     * 分析型大数据任务不但是data-intensive的，而且是computation-intensive的，所以我们可以通过分析一个任务的拓扑结构来预测其执行时间
     * Spark等高级分析框架（有别于只有两种operator的Map Reduce）的workflow DAG中，有一些常见的简单结构，比如：一对多、树状聚合、混洗等，它们的耗时对于数据量都是成线性或近似线性关系的，和集群中的机器数也成良好增长关系，否则算法会过于复杂无法在大数据上跑
@@ -16,9 +16,9 @@
 * 公式
     * ![图片](https://uploader.shimo.im/f/sEgTy7g29NRoasrG.png!thumbnail?fileGuid=XpTpkQwPYpWkKgW6)
     * 366页说，当data随着机器增加而增加时（即每一台机器的data数量不变）
-        * collect结构（all-to-one）耗时增长模式为：O（machines）
+        * collect结构（all-to-one）耗时增长模式为：O(machines)
             * 因为序列化和反序列化耗时
-        * binary 的aggregation tree则是 O（log（machine））
+        * binary 的aggregation tree则是 O(log(machine)
         * scale就是数据量：见367页
 * 效果
     * 在耗费5%的原任务运行时长时，预测的误差不超过20%
@@ -28,7 +28,7 @@
         * 找出要跑的样例数据量和机器数的上限，比如scale<10%（即最多用10%的正式数据集来作为样例），machines<5，那么我们有5*10=50种feature vector
         * 将这些feature vector全部投入下图的协方差矩阵运算中
             * ![图片](https://uploader.shimo.im/f/8K2BVdwHKzjFJABj.png!thumbnail?fileGuid=XpTpkQwPYpWkKgW6)
-                * 其中$$a_i$$表示feature vector，我们希望能找到合适的feature vector使得这个误差函数最小化
+                * 其中$a_i$表示feature vector，我们希望能找到合适的feature vector使得这个误差函数最小化
         * 选择跑λ值不为0的实验
         * 另外，我们要额外控制一下总成本
             * ![图片](https://uploader.shimo.im/f/Zq95ZpQSe5mKikmw.png!thumbnail?fileGuid=XpTpkQwPYpWkKgW6)
