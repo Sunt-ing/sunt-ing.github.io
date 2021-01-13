@@ -1,9 +1,6 @@
-_site/
-*.swp
-*.~vsd
-\#*\#
-*~
+_site
+.sass-cache
+node_modules
+/vendor
 .DS_Store
-Gemfile.lock
-.vscode/
-.idea/
+.idea
