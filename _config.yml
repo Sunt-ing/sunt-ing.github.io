@@ -1,114 +1,88 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
-baseurl:
-url: https://sunt-ing.github.io
-date_format: "ordinal"
-title: Sunt
-subtitle: "VENI VIDI VICI"
-description: "Personal website of Sunt"
-keywords: 孙挺, Sun Ting, Sunt
-timezone: Asia/Beijing
-encoding: "utf-8"
-side_bar_repo_limit: 5
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# ---------------- #
-#      Author      #
-# ---------------- #
-author: Sunt
-organization: SUSTech
-organization_url: 
-github_username: Sunt-ing
-location: Shenzhen
-email: 11710108@mail.sustech.edu.cn
+# Site settings
+title: I am Sunt !
+name: SUNTing
+email: sunt2017@sustech.edu.cn.com
+location: Shenzhen, China
+# company: Gfi Informatique
+# company_url: http://www.gfi.fr/en/
+github_url: https://github.com/Sunt-ing
+description: This is personnel website of SUN Ting
+favicon: favicon.png # Image must be in assets/images
 
-# ---------------- #
-#    Navigation    #
-# ---------------- #
+url: http://dongchuan.github.io # the base hostname & protocol for your site
+
+## Gem
+gems:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
+source:      .
+destination: ./_site
+
+quiet:    false
+defaults: []
+
+kramdown:
+  input: GFM
+  enable_coderay: true
+
+# Disque
+# disque: httpdongchuangithubio.disqus.com
+
+# Pagination
+paginate: 10
+paginate_path: 'page:num'
+
+# Navigation
 navs:
-  - href: /
-    label: Blog
-
-  - href: /about/
-    label: About
-
-  - href: /life/
-    label: Life
-
-#  -
-#    href: /category/
-#    label: Category
-
-# 归档功能不能用，一用就报错
-#   -
-#     href: /archives/
-#     label: 归档
+  -
+    href: /
+    label: Home
 
   -
-    href: /wiki/
-    label: Wiki
+    href: /open-source
+    label: Open-Source
 
-# ---------------- #
-#       RSS        #
-# ---------------- #
-subscribe_rss: /feed.xml
+  -
+    href: /blog
+    label: Blog
 
-# ---------------- #
-#      Jekyll      #
-# ---------------- #
-markdown: kramdown
-kramdown:
-    input: GFM
-highlighter: rouge
-paginate: 10
-lsi: false
-quiet: false
-excerpt_separator: "\n\n"
-permalink: /:year/:month/:day/:title/
-gems:
-    - jekyll-github-metadata
-    - rouge
-#     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
-#     - jekyll-mentions
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+  -
+    href: /bookmark
+    label: Bookmark
 
-repository: Sunt-ing/sunt-ing.github.io
-comments_provider: gitalk
+  -
+    href: /about
+    label: About
 
-# https://disqus.com
-disqus:
-    username:
-# https://imsun.net/posts/gitment-introduction/
-gitment:
+# Sidebar to show popular repo
+side_bar_repo_limit: 5 # Number of repos to show
 
-gitalk:
-    owner: Sunt-ing
-    repo: blog-comments
-    clientID: 03ea9de74f704f691331
-    clientSecret: f84eca9283e3aa26ebe34e16a3455f7f9683d3ef
-    
-    
-# 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : false
+# Google Analytics
+# analytics :
+#   provider : google
+#   google :
+#       tracking_id : 'UA-72165600-1'
 
-# ---------------- #
-#      Search      #
-# ---------------- #
-simple_jekyll_search:
-    # 是否支持全文搜索
-    fulltext: false
-    # 最多显示多少条搜索结果
-    limit: 10
 
-# ---------------- #
-#    Analytics     #
-# ---------------- #
-google:
-    analytics_id: UA-80669434-1
+# For about.html. Fell free to create your own!
+skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
+skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
+skill_mobile_app_keywords: [Android, Sketch UI Desgin]
