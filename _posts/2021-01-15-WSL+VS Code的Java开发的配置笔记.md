@@ -7,8 +7,8 @@
     - 通过用户名和密码登入，如 ssh 
     - 通过带 --login 参数的命令：bash --login 而启动的 shell
   - 读取的配置文件
-    - bash：`/etc/profile`，`~/.bash_profile`， `~/.bash_login`，`~/.profile`
-      - 如果 ~/.bash_profile 或 ~/.bash_login 存在就不会读取 .profile
+    - bash：`/etc/profile` > `~/.bash_profile`  > `~/.bash_login` > `~/.profile` \> `.bash_logout`
+      - 如果 `~/.bash_profile` 或 `~/.bash_login` 存在就不会读取 `~/.profile`
     - zsh：`/etc/zprofile` 和 `~/.zprofile`
 - **non-login bash**：登录以后所打开的 bash
   - 举例
